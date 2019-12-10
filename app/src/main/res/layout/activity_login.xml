@@ -17,4 +17,52 @@
         android:textAlignment="center"
         android:textStyle="bold"/>
 
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:hint="email"
+        android:inputType="textWebEmailAddress"
+        android:textColor="#000"
+        android:textColorHint="#a6a6a6"/>
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:textColor="#000"
+        android:textColorHint="#a6a6a6"/>
+
+    <Button
+        android:id="@+id/btnIngresarCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="#27C45F"
+        android:textColor="#000"
+        android:text="Conectarse como Cliente" />
+
+    <Button
+        android:id="@+id/btnIngresarColectivo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="#27C45F"
+        android:textColor="#000"
+        android:text="Conectarse como Colectivo" />
+
+    <TextView
+        android:id="@+id/tvRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrarse"
+        android:textColor="#000"
+        android:textAlignment="center"
+        android:textStyle="bold"/>
+
+
 </LinearLayout>
