@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.barberapp.barberapp.MainColectivo">
+
+    <item android:id="@+id/Recorridos"
+        android:title="Recorridos"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/Favoritos"
+        android:title="Favoritos"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/Nosotros"
+        android:title="Sobre Nosotros"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/Adds"
+        android:title="Quitar publicidad"/>
+
+    <item android:id="@+id/CerrarSesion"
+        android:title="Cerrar sesión"/>
+
+
+
+</menu>

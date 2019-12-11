@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainColectivo"></activity>
+        <activity android:name=".MainColectivo" />
         <activity android:name=".MainCliente" />
         <activity android:name=".UserClienteCreation" />
         <activity android:name=".UserColectivoCreation" />
