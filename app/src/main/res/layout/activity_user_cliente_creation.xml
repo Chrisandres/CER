@@ -17,4 +17,60 @@
         android:textAlignment="center"
         android:textStyle="bold"/>
 
+    <EditText
+        android:id="@+id/txtNombreUsuarioCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:hint="Nombre de usuario"
+        android:inputType="textPersonName"
+        android:textColor="#000"
+        android:textColorHint="#a6a6a6"/>
+
+    <EditText
+        android:id="@+id/txtEmailCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:hint="Correo"
+        android:inputType="textEmailAddress"
+        android:textColor="#000"
+        android:textColorHint="#a6a6a6"/>
+
+    <EditText
+        android:id="@+id/txtContraseñaCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:textColor="#000"
+        android:textColorHint="#a6a6a6"/>
+
+    <EditText
+        android:id="@+id/txtPhoneCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Teléfono (opcional)"
+        android:inputType="phone"
+        android:textColorHint="#a6a6a6"
+        android:textColor="#000"
+        android:layout_margin="3dp"/>
+
+    <CheckBox
+        android:id="@+id/chkCondicionesCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Acepto los términos y condiciones del servicio" />
+
+    <Button
+        android:id="@+id/btnRegistrarCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crear cuenta"
+        android:background="#27C45F"
+        android:textColor="#000"
+        android:layout_margin="2dp"/>
+
 </LinearLayout>
