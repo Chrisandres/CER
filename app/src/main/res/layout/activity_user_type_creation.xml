@@ -17,4 +17,22 @@
         android:textAlignment="center"
         android:textStyle="bold"/>
 
+    <Button
+        android:id="@+id/btnRegistroColectivo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="#27C45F"
+        android:textColor="#000"
+        android:text="Registrarse como Colectivero" />
+
+    <Button
+        android:id="@+id/btnRegistroCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="#27C45F"
+        android:textColor="#000"
+        android:text="Registrarse como cliente" />
+
 </LinearLayout>
