@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AboutUsCliente"></activity>
+        <activity android:name=".Favoritos" />
+        <activity android:name=".AboutUsColectivo" />
         <activity android:name=".MainColectivo" />
         <activity android:name=".MainCliente" />
         <activity android:name=".UserClienteCreation" />

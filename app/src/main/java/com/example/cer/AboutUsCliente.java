@@ -10,13 +10,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class MainColectivo extends AppCompatActivity {
+public class AboutUsCliente extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_main,menu);
+        inflater.inflate(R.menu.menu_main2,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -29,22 +29,29 @@ public class MainColectivo extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
 
         if(id == R.id.Recorridos){
-            text = "Recargando página";
-            Intent actionC = new Intent(MainColectivo.this,MainColectivo.class);
+            text = "Cargango página de recorridos";
+            Intent actionC = new Intent(AboutUsCliente.this,MainCliente.class);
+            actionC.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(actionC);
+            finish();
+        }
+        else if(id == R.id.Favoritos){
+            text = "Cargando página de favoritos";
+            Intent actionC = new Intent(AboutUsCliente.this,Favoritos.class);
             actionC.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(actionC);
             finish();
         }
         else if(id == R.id.Nosotros){
-            text = "Sobre nosotros";
-            Intent actionC = new Intent(MainColectivo.this,AboutUsColectivo.class);
+            text = "Recargando página Sobre Nosotros";
+            Intent actionC = new Intent(AboutUsCliente.this,AboutUsCliente.class);
             actionC.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(actionC);
             finish();
         }
         else if(id == R.id.CerrarSesion){
             text = "Ha cerrado su sesión";
-            Intent actionC = new Intent(MainColectivo.this,Login.class);
+            Intent actionC = new Intent(AboutUsCliente.this,Login.class);
             actionC.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(actionC);
             finish();
@@ -58,6 +65,6 @@ public class MainColectivo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_colectivo);
+        setContentView(R.layout.activity_about_us_cliente);
     }
 }

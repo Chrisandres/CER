@@ -10,7 +10,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class MainColectivo extends AppCompatActivity {
+public class AboutUsColectivo extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
@@ -29,22 +29,22 @@ public class MainColectivo extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
 
         if(id == R.id.Recorridos){
-            text = "Recargando página";
-            Intent actionC = new Intent(MainColectivo.this,MainColectivo.class);
+            text = "GPS de colectivero";
+            Intent actionC = new Intent(AboutUsColectivo.this,MainColectivo.class);
             actionC.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(actionC);
             finish();
         }
         else if(id == R.id.Nosotros){
-            text = "Sobre nosotros";
-            Intent actionC = new Intent(MainColectivo.this,AboutUsColectivo.class);
+            text = "Recargando página";
+            Intent actionC = new Intent(AboutUsColectivo.this,AboutUsColectivo.class);
             actionC.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(actionC);
             finish();
         }
         else if(id == R.id.CerrarSesion){
             text = "Ha cerrado su sesión";
-            Intent actionC = new Intent(MainColectivo.this,Login.class);
+            Intent actionC = new Intent(AboutUsColectivo.this,Login.class);
             actionC.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(actionC);
             finish();
@@ -58,6 +58,6 @@ public class MainColectivo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_colectivo);
+        setContentView(R.layout.activity_about_us_colectivo);
     }
 }
