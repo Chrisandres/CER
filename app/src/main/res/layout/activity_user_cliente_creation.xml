@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="5dp"
-    android:background="#FFF5F3"
+    android:background="#969C9F"
     tools:context=".UserClienteCreation">
 
     <TextView
@@ -17,6 +17,12 @@
         android:textAlignment="center"
         android:textStyle="bold"/>
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/colectivoenruta" />
+
     <EditText
         android:id="@+id/txtNombreUsuarioCliente"
         android:layout_width="match_parent"
@@ -25,7 +31,7 @@
         android:hint="Nombre de usuario"
         android:inputType="textPersonName"
         android:textColor="#000"
-        android:textColorHint="#a6a6a6"/>
+        android:textColorHint="#FFFFFF"/>
 
     <EditText
         android:id="@+id/txtEmailCliente"
@@ -35,7 +41,7 @@
         android:hint="Correo"
         android:inputType="textEmailAddress"
         android:textColor="#000"
-        android:textColorHint="#a6a6a6"/>
+        android:textColorHint="#FFFFFF"/>
 
     <EditText
         android:id="@+id/txtContraseñaCliente"
@@ -45,7 +51,7 @@
         android:hint="Contraseña"
         android:inputType="textPassword"
         android:textColor="#000"
-        android:textColorHint="#a6a6a6"/>
+        android:textColorHint="#FFFFFF"/>
 
     <EditText
         android:id="@+id/txtPhoneCliente"
@@ -54,7 +60,7 @@
         android:ems="10"
         android:hint="Teléfono (opcional)"
         android:inputType="phone"
-        android:textColorHint="#a6a6a6"
+        android:textColorHint="#FFFFFF"
         android:textColor="#000"
         android:layout_margin="3dp"/>
 
