@@ -23,4 +23,33 @@
         android:layout_height="200dp"
         android:src="@drawable/colectivoenruta" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Texto de presentación de Colectivo En Ruta, por el momento es un texto de ejemplo hasta que los jefes
+decidan cuál es el mejor mensaje posible, algo atractivo y genial que convenza al comprador de que está usando un servicio de calidad."
+        android:textColor="#000"
+        android:textAlignment="center"
+        android:inputType="textMultiLine"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#000"
+        android:textAlignment="center"
+        android:inputType="textMultiLine"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Podrían incluirse los términos y condiciones de uso del servicio, normas a respetar, incluso condiciones para el cierre del uso
+del servicio por incumplimiento del contrato"
+        android:textColor="#000"
+        android:textAlignment="center"
+        android:inputType="textMultiLine"
+        android:textStyle="bold"/>
+
 </LinearLayout>

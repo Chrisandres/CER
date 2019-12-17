@@ -41,7 +41,7 @@ public class Login extends AppCompatActivity {
         btnIngresarColectivo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),MainColectivo.class);
+                Intent i = new Intent(getApplicationContext(),MapsActivityColectivo.class);
                 startActivity(i);
             }
         });

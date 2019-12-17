@@ -30,7 +30,7 @@ public class AboutUsColectivo extends AppCompatActivity {
 
         if(id == R.id.Recorridos){
             text = "GPS de colectivero";
-            Intent actionC = new Intent(AboutUsColectivo.this,MainColectivo.class);
+            Intent actionC = new Intent(AboutUsColectivo.this,MapsActivityColectivo.class);
             actionC.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(actionC);
             finish();
