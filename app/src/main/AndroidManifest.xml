@@ -31,7 +31,7 @@
 
         <activity
             android:name=".MapsActivityColectivo"
-            android:label="@string/title_activity_maps_colectivo"></activity>
+            android:label="Mapa"></activity>
         <activity android:name=".AboutUsCliente" />
         <activity android:name=".Favoritos" />
         <activity android:name=".AboutUsColectivo" />
