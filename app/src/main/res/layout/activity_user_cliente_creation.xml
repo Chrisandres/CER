@@ -68,7 +68,8 @@
         android:id="@+id/chkCondicionesCliente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Acepto los términos y condiciones del servicio" />
+        android:text="Acepto los términos y condiciones del servicio"
+        android:visibility="invisible"/>
 
     <Button
         android:id="@+id/btnRegistrarCliente"
