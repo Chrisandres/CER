@@ -10,8 +10,8 @@
         app:showAsAction="always"/>
 
     <item android:id="@+id/Favoritos"
-        android:title="Favoritos"
-        android:icon="@drawable/favoritos"
+        android:title="Mapa"
+        android:icon="@drawable/gps"
         app:showAsAction="always"/>
 
     <item android:id="@+id/Nosotros"

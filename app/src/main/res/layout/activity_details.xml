@@ -48,7 +48,7 @@
                             android:layout_height="wrap_content"
                             android:maxLines="1"
                             android:padding="5dp"
-                            android:text="NAME : "
+                            android:text="Nombre : "
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:textStyle="bold" />
 
@@ -58,7 +58,7 @@
                             android:layout_height="wrap_content"
                             android:maxLines="1"
                             android:padding="5dp"
-                            android:text="Voyager"
+                            android:text="Nombre Colectivo"
                             android:textAppearance="?android:attr/textAppearanceLarge"/>
                     </LinearLayout>
 
@@ -73,7 +73,7 @@
                             android:layout_height="wrap_content"
                             android:maxLines="1"
                             android:padding="5dp"
-                            android:text="DATE : "
+                            android:text="Fecha: "
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:textStyle="bold" />
 
@@ -83,7 +83,7 @@
                             android:layout_height="wrap_content"
                             android:maxLines="1"
                             android:padding="5dp"
-                            android:text="Today"
+                            android:text="Fecha de hoy"
                             android:textAppearance="?android:attr/textAppearanceLarge"/>
                     </LinearLayout>
 
@@ -98,7 +98,7 @@
                             android:layout_height="wrap_content"
                             android:maxLines="1"
                             android:padding="5dp"
-                            android:text="DESTINATION : "
+                            android:text="Inicio : "
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:textStyle="bold" />
 
@@ -108,7 +108,7 @@
                             android:layout_height="wrap_content"
                             android:maxLines="1"
                             android:padding="5dp"
-                            android:text="KY Cygni"
+                            android:text="Punto de partida"
                             android:textAppearance="?android:attr/textAppearanceLarge"/>
                     </LinearLayout>
                     <LinearLayout
@@ -122,7 +122,7 @@
                             android:layout_height="wrap_content"
                             android:maxLines="1"
                             android:padding="5dp"
-                            android:text="PROPELLANT : "
+                            android:text="Destino : "
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:textStyle="bold" />
 
@@ -132,7 +132,7 @@
                             android:layout_height="wrap_content"
                             android:maxLines="1"
                             android:padding="5dp"
-                            android:text="Chemical"
+                            android:text="Punto de fin"
                             android:textAppearance="?android:attr/textAppearanceLarge"/>
                     </LinearLayout>
 
@@ -147,7 +147,7 @@
                             android:layout_height="wrap_content"
                             android:maxLines="1"
                             android:padding="5dp"
-                            android:text="TECH EXISTS? : "
+                            android:text="Disponible : "
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:textStyle="bold" />
 

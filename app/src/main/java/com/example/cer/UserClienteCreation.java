@@ -1,5 +1,6 @@
 package com.example.cer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -39,6 +40,8 @@ public class UserClienteCreation extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ejecutarServicio("http://10.0.3.2/php/cer/insertar_usuario.php");
+                Intent i = new Intent(getApplicationContext(), Login.class);
+                startActivity(i);
             }
         });
 

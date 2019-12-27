@@ -1,7 +1,5 @@
 package com.example.cer;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +7,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class AboutUsCliente extends AppCompatActivity {
 
@@ -36,8 +36,8 @@ public class AboutUsCliente extends AppCompatActivity {
             finish();
         }
         else if(id == R.id.Favoritos){
-            text = "Cargando página de favoritos";
-            Intent actionC = new Intent(AboutUsCliente.this,Favoritos.class);
+            text = "Cargando Mapa";
+            Intent actionC = new Intent(AboutUsCliente.this,MapsActivityC.class);
             actionC.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(actionC);
             finish();

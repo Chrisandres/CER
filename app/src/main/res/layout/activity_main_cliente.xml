@@ -27,6 +27,28 @@
         android:indeterminateBehavior="cycle"
         android:visibility="gone" />
 
+    <EditText
+        android:id="@+id/txtUsuarioSolicitante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Verificar usuario"/>
+
+    <EditText
+        android:id="@+id/txtUbicacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Verificar ubicación" />
+
+    <Button
+        android:id="@+id/buttonSolicitar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar alerta" />
+
     <SearchView
         android:id="@+id/mSearchView"
         app:queryHint="Filter.."

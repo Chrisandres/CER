@@ -10,7 +10,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
@@ -22,11 +24,19 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.gson.annotations.SerializedName;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -59,8 +69,8 @@ public class MainCliente extends AppCompatActivity {
             startActivity(actionC);
             finish();
         } else if (id == R.id.Favoritos) {
-            text = "Cargando página de favoritos";
-            Intent actionC = new Intent(MainCliente.this, Favoritos.class);
+            text = "Cargando Mapa";
+            Intent actionC = new Intent(MainCliente.this, MapsActivityC.class);
             actionC.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(actionC);
             finish();
@@ -86,6 +96,9 @@ public class MainCliente extends AppCompatActivity {
     //private static final String BASE_URL = "http://10.0.2.2";
     private static final String BASE_URL = "http://10.0.3.2";
     private static final String FULL_URL = BASE_URL+"/PHP/CER/";
+
+    EditText txtUsuarioSolicitante, txtUbicacion;
+    Button buttonSolicitar;
 
     class Colectivo {
         @SerializedName("id")
@@ -384,5 +397,40 @@ public class MainCliente extends AppCompatActivity {
             }
         });
 
+        txtUsuarioSolicitante=(EditText)findViewById(R.id.txtUsuarioSolicitante);
+        txtUbicacion=(EditText)findViewById(R.id.txtUbicacion);
+        buttonSolicitar=(Button)findViewById(R.id.buttonSolicitar);
+
+        buttonSolicitar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ejecutarServicio("http://10.0.3.2/php/cer/insertar_alerta.php");
+            }
+        });
+
+    }
+
+    private void ejecutarServicio(String URL){
+        StringRequest stringRequest= new StringRequest(Request.Method.POST, URL, new com.android.volley.Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Toast.makeText(getApplicationContext(), "Alerta enviada", Toast.LENGTH_SHORT).show();
+            }
+        }, new com.android.volley.Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_SHORT).show();
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> parametros = new HashMap<String, String>();
+                parametros.put("nombre",txtUsuarioSolicitante.getText().toString());
+                parametros.put("ubicacion",txtUbicacion.getText().toString());
+                return parametros;
+            }
+        };
+        RequestQueue requestQueue= Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
     }
 }

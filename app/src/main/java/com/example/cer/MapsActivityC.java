@@ -45,13 +45,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class MapsActivityColectivo extends AppCompatActivity implements OnMapReadyCallback, TaskLoadedCallback {
+public class MapsActivityC extends AppCompatActivity implements OnMapReadyCallback, TaskLoadedCallback {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_main,menu);
+        inflater.inflate(R.menu.menu_main2,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -64,22 +64,29 @@ public class MapsActivityColectivo extends AppCompatActivity implements OnMapRea
         int duration = Toast.LENGTH_SHORT;
 
         if(id == R.id.Recorridos){
-            text = "Recargando página";
-            Intent actionC = new Intent(MapsActivityColectivo.this,MapsActivityColectivo.class);
+            text = "Cargango página de recorridos";
+            Intent actionC = new Intent(MapsActivityC.this,MainCliente.class);
+            actionC.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(actionC);
+            finish();
+        }
+        else if(id == R.id.Favoritos){
+            text = "Recargando Mapa";
+            Intent actionC = new Intent(MapsActivityC.this,MapsActivityC.class);
             actionC.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(actionC);
             finish();
         }
         else if(id == R.id.Nosotros){
-            text = "Sobre nosotros";
-            Intent actionC = new Intent(MapsActivityColectivo.this,AboutUsColectivo.class);
+            text = "Cargando página Sobre Nosotros";
+            Intent actionC = new Intent(MapsActivityC.this,AboutUsCliente.class);
             actionC.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(actionC);
             finish();
         }
         else if(id == R.id.CerrarSesion){
             text = "Ha cerrado su sesión";
-            Intent actionC = new Intent(MapsActivityColectivo.this,Login.class);
+            Intent actionC = new Intent(MapsActivityC.this,Login.class);
             actionC.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(actionC);
             finish();
@@ -101,10 +108,10 @@ public class MapsActivityColectivo extends AppCompatActivity implements OnMapRea
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps_colectivo);
+        setContentView(R.layout.activity_maps_c);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.mapNearBy);
+                .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         listPoints = new ArrayList<>();
 
@@ -112,8 +119,8 @@ public class MapsActivityColectivo extends AppCompatActivity implements OnMapRea
         getDirection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new FetchURL(MapsActivityColectivo.this).execute(getUrl(place1.getPosition(), place2.getPosition(), "driving"), "driving");
-                new FetchURL(MapsActivityColectivo.this).execute(getUrl(place3.getPosition(), place4.getPosition(), "driving"), "driving");
+                new FetchURL(MapsActivityC.this).execute(getUrl(place1.getPosition(), place2.getPosition(), "driving"), "driving");
+                new FetchURL(MapsActivityC.this).execute(getUrl(place3.getPosition(), place4.getPosition(), "driving"), "driving");
             }
         });
         //27.658143,85.3199503
@@ -123,9 +130,8 @@ public class MapsActivityColectivo extends AppCompatActivity implements OnMapRea
         place3 = new MarkerOptions().position(new LatLng(-33.447917,-70.7540425)).title("Pudahuel");
         place4 = new MarkerOptions().position(new LatLng(-33.4899214,-70.6174798)).title("Macul");
         MapFragment mapFragment2 = (MapFragment) getFragmentManager()
-                .findFragmentById(R.id.mapNearBy);
+                .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
     }
 
 
@@ -140,6 +146,8 @@ public class MapsActivityColectivo extends AppCompatActivity implements OnMapRea
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
         mMap = googleMap;
 
         Log.d("mylog", "Added Markers");
@@ -179,7 +187,7 @@ public class MapsActivityColectivo extends AppCompatActivity implements OnMapRea
                 if (listPoints.size() == 2) {
                     //Create the URL to get request from first marker to second marker
                     String url = getRequestUrl(listPoints.get(0), listPoints.get(1));
-                    TaskRequestDirections taskRequestDirections = new TaskRequestDirections();
+                    MapsActivityC.TaskRequestDirections taskRequestDirections = new MapsActivityC.TaskRequestDirections();
                     taskRequestDirections.execute(url);
                 }
             }
@@ -268,7 +276,7 @@ public class MapsActivityColectivo extends AppCompatActivity implements OnMapRea
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             //Parse json here
-            TaskParser taskParser = new TaskParser();
+            MapsActivityC.TaskParser taskParser = new MapsActivityC.TaskParser();
             taskParser.execute(s);
         }
     }
