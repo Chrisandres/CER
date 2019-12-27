@@ -142,7 +142,7 @@ public class MainCliente extends AppCompatActivity {
 
     interface MyAPIService {
 
-        @GET("/PHP/CER/")
+        @GET("/PHP/CER/colectivos.php")
         Call<List<Colectivo>> getColectivos();
     }
 
